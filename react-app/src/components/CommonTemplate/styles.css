@@ -1,0 +1,17 @@
+#root {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 'main-header' 'main-container';
+  min-width: 992px;
+}
+
+.main-header {
+  grid-area: main-header;
+}
+
+.main-container {
+  display: grid;
+  grid-area: main-container;
+  grid-template-columns: 280px 1fr;
+}
