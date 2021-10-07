@@ -1,0 +1,6 @@
+.no-hover:hover,
+.no-hover:focus {
+  background-color: inherit !important;
+  color: inherit !important;
+  cursor: default;
+}

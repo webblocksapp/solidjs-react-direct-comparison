@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../Header';
-import Sidebar from '../Sidebar';
 import './styles.css';
 
 const CommonTemplate: React.FC = ({ children }) => {
@@ -8,7 +7,6 @@ const CommonTemplate: React.FC = ({ children }) => {
     <>
       <Header mainTitle="React App"></Header>
       <div className="main-container">
-        <Sidebar />
         <div className=" p-3">{children}</div>
       </div>
     </>
