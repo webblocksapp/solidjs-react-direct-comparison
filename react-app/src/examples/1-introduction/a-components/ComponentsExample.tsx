@@ -1,8 +1,8 @@
 import React from 'react';
-import Component from './Component';
+import Components from './Components';
 
 const ComponentExample: React.FC = () => {
-  return <Component />;
+  return <Components />;
 };
 
 export default ComponentExample;
