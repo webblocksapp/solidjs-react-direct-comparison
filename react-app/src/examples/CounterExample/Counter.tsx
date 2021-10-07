@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import CommonTemplate from '@Components/CommonTemplate';
 import Button from '@Components/Button';
 
-const CounterScreen: React.FC = () => {
+const Counter: React.FC = () => {
   const [counter, setCounter] = useState<number>(0);
 
   const increment = () => {
@@ -14,14 +13,14 @@ const CounterScreen: React.FC = () => {
   };
 
   return (
-    <CommonTemplate>
+    <>
       <p className="h1">{counter}</p>
       <Button onClick={increment} className="me-2">
         +
       </Button>
       <Button onClick={decrement}>-</Button>
-    </CommonTemplate>
+    </>
   );
 };
 
-export default CounterScreen;
+export default Counter;
