@@ -1,8 +1,8 @@
 import React from 'react';
 import CommonTemplate from '@Components/CommonTemplate';
 
-const UseEffectScreen: React.FC = () => {
+const HelloWorldScreen: React.FC = () => {
   return <CommonTemplate>Hello world</CommonTemplate>;
 };
 
-export default UseEffectScreen;
+export default HelloWorldScreen;

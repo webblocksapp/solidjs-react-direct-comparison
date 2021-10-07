@@ -4,7 +4,12 @@ import { NavLink } from 'react-router-dom';
 const menu = [
   {
     sectionName: '1. Introduction',
-    children: [{ path: '/', label: 'Simple render' }],
+    children: [
+      { path: '/', label: 'Hello world' },
+      { path: '/counter', label: 'Counter' },
+      { path: '/interval', label: 'Interval' },
+      { path: '/effects', label: 'Effects' },
+    ],
   },
 ];
 
@@ -19,8 +24,9 @@ const Sidebar: React.FC = () => {
             {menuItem.children.map((child, j) => (
               <li key={j} className="nav-item">
                 <NavLink
+                  exact
                   to={child.path}
-                  className="nav-link active text-decoration-none"
+                  className="nav-link text-decoration-none text-white"
                   activeClassName="active"
                   aria-current="page"
                 >

@@ -1,11 +1,17 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
-import UseEffectScreen from '../../screens/UseEffectScreen';
+import CounterScreen from 'src/screens/CounterScreen';
+import EffectsScreen from 'src/screens/EffectsScreen';
+import IntervalScreen from 'src/screens/IntervalScreen';
+import HelloWorldScreen from '../../screens/HelloWorldScreen';
 
 const MainRoutes: React.FC = () => {
   return (
     <Switch>
-      <Route path="/" component={UseEffectScreen} />
+      <Route exact path="/" component={HelloWorldScreen} />
+      <Route path="/counter" component={CounterScreen} />
+      <Route path="/interval" component={IntervalScreen} />
+      <Route path="/effects" component={EffectsScreen} />
     </Switch>
   );
 };
