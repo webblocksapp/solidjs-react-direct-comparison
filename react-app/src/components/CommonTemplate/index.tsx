@@ -7,7 +7,7 @@ const CommonTemplate: React.FC = ({ children }) => {
     <>
       <Header mainTitle="React App"></Header>
       <div className="main-container">
-        <div className=" p-3">{children}</div>
+        <div>{children}</div>
       </div>
     </>
   );
