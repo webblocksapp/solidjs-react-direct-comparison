@@ -6,9 +6,7 @@ const CommonTemplate: React.FC = ({ children }) => {
   return (
     <>
       <Header mainTitle="React App"></Header>
-      <div className="main-container">
-        <div>{children}</div>
-      </div>
+      <div className="main-container">{children}</div>
     </>
   );
 };
