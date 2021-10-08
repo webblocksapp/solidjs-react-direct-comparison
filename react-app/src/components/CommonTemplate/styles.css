@@ -3,7 +3,6 @@
   display: grid;
   grid-template-rows: auto 1fr;
   grid-template-areas: 'main-header' 'main-container';
-  min-width: 900px;
 }
 
 .main-header {
