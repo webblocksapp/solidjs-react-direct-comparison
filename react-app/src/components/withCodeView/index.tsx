@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { CodeFile } from '@Types';
 import hljs from '@Assets/highlight.js';
-import 'highlightjs-line-numbers.js';
 import 'highlight.js/styles/hybrid.css';
 import './styles.css';
 
@@ -11,13 +10,13 @@ function withCodeView<TProps>(Component: React.FC<TProps>, files: CodeFile[]) {
     const [selectedTab, setSelectedTab] = useState<number>(0);
     const previewContainerRef = useRef<HTMLDivElement>(null);
 
-    const highlightCodes = async () => {
+    const highlightCodes = () => {
       const items: CodeFile[] = [];
 
       files.forEach((file) => {
         items.push({
           ...file,
-          code: (hljs as any).lineNumbersValue(
+          code: hljs.lineNumbersValue(
             hljs.highlight(file.code, { language: file.language }).value
           ),
         });

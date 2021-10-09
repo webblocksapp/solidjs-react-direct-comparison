@@ -4,6 +4,7 @@
       "@Assets/*": ["src/assets/*"],
       "@Components/*": ["src/components/*"],
       "@Examples/*": ["src/examples/*"],
+      "@Interfaces": ["src/interfaces"],
       "@Types": ["src/app-types"]
     },
     "typeRoots": ["node_modules/@types", "src/typings"]
