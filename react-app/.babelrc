@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    [
+      "prismjs",
+      {
+        "languages": ["typescript", "tsx"],
+        "plugins": ["line-numbers"],
+        "theme": "twilight",
+        "css": true
+      }
+    ]
+  ],
+  "presets": ["@babel/react", "@babel/preset-typescript"]
+}

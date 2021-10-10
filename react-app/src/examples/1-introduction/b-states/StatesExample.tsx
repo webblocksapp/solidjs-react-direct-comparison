@@ -8,5 +8,5 @@ const CounterExample: React.FC = () => {
 };
 
 export default withCodeView(CounterExample, [
-  { title: 'Counter.tsx', code: CounterCode, language: 'typescript' },
+  { title: 'Counter.tsx', code: CounterCode, language: 'tsx' },
 ]);

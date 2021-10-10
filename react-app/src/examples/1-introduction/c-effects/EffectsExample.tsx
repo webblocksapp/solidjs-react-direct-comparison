@@ -8,5 +8,5 @@ const EffectsExample: React.FC = () => {
 };
 
 export default withCodeView(EffectsExample, [
-  { title: 'Counter.tsx', code: CounterCode, language: 'typescript' },
+  { title: 'Counter.tsx', code: CounterCode, language: 'tsx' },
 ]);

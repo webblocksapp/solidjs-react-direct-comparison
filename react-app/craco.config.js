@@ -1,4 +1,5 @@
 const { CracoAliasPlugin, configPaths } = require('react-app-rewire-alias');
+const BabelRcPlugin = require('@jackwilsdon/craco-use-babelrc');
 
 const aliasMap = configPaths('./tsconfig.base.json'); // or jsconfig.paths.json
 
@@ -16,5 +17,6 @@ module.exports = {
       plugin: CracoAliasPlugin,
       options: { alias: aliasMap },
     },
+    { plugin: BabelRcPlugin },
   ],
 };

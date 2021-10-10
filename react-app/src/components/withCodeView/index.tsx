@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { CodeFile } from '@Types';
-import hljs from '@Assets/highlight.js';
-import 'highlight.js/styles/hybrid.css';
+import Prism from 'prismjs';
+import 'prismjs/themes/prism-tomorrow.css';
 import './styles.css';
 
 function withCodeView<TProps>(Component: React.FC<TProps>, files: CodeFile[]) {
@@ -10,14 +10,16 @@ function withCodeView<TProps>(Component: React.FC<TProps>, files: CodeFile[]) {
     const [selectedTab, setSelectedTab] = useState<number>(0);
     const previewContainerRef = useRef<HTMLDivElement>(null);
 
-    const highlightCodes = () => {
+    const highlightCodes = async () => {
       const items: CodeFile[] = [];
 
       files.forEach((file) => {
         items.push({
           ...file,
-          code: hljs.lineNumbersValue(
-            hljs.highlight(file.code, { language: file.language }).value
+          code: Prism.highlight(
+            file.code,
+            Prism.languages[file.language],
+            file.language
           ),
         });
       });
@@ -56,9 +58,12 @@ function withCodeView<TProps>(Component: React.FC<TProps>, files: CodeFile[]) {
           {codeFiles.map(
             (codeFile, i) =>
               selectedTab === i && (
-                <pre className="mb-0" key={i}>
+                <pre
+                  className={`language-${codeFile.language} m-0 border-0 rounded-0`}
+                  key={i}
+                >
                   <code
-                    className="hljs h-100"
+                    className={`language-${codeFile.language} h-100`}
                     dangerouslySetInnerHTML={{ __html: codeFile.code }}
                   ></code>
                 </pre>

@@ -9,6 +9,6 @@ const ComponentExample: React.FC = () => {
 };
 
 export default withCodeView(ComponentExample, [
-  { title: 'Components.tsx', code: ComponentsCode, language: 'typescript' },
-  { title: 'Nested.tsx', code: NestedCode, language: 'typescript' },
+  { title: 'Components.tsx', code: ComponentsCode, language: 'tsx' },
+  { title: 'Nested.tsx', code: NestedCode, language: 'tsx' },
 ]);
