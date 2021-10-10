@@ -2,7 +2,7 @@ import React from 'react';
 import { ButtonVariant } from '@Types';
 
 interface ButtonProps {
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   variant?: ButtonVariant;
   className?: string;
 }

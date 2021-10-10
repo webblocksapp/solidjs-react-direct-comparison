@@ -5,7 +5,11 @@ import { Menu, Route } from '@Types';
 const menu: Menu[] = [
   {
     sectionName: '1. Introduction',
-    routes: [{ path: '/', label: 'Components' }],
+    routes: [
+      { path: '/', label: 'Components' },
+      { path: '/states', label: 'States' },
+      { path: '/effects', label: 'Effects' },
+    ],
   },
   {
     sectionName: '2. Control Flow',
