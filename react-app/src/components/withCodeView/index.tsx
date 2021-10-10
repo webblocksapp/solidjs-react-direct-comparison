@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { CodeFile } from '@Types';
-import Prism from 'prismjs';
+import Prism from '@Assets/prismjs';
 import 'prismjs/themes/prism-tomorrow.css';
 import './styles.css';
 
@@ -16,10 +16,12 @@ function withCodeView<TProps>(Component: React.FC<TProps>, files: CodeFile[]) {
       files.forEach((file) => {
         items.push({
           ...file,
-          code: Prism.highlight(
-            file.code,
-            Prism.languages[file.language],
-            file.language
+          code: Prism.addLineNumbers(
+            Prism.highlight(
+              file.code,
+              Prism.languages[file.language],
+              file.language
+            )
           ),
         });
       });

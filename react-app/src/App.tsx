@@ -2,7 +2,7 @@ import React from 'react';
 import CommonTemplate from '@Components/CommonTemplate';
 import MainRoutes from './routes/MainRoutes';
 import { BrowserRouter as Router } from 'react-router-dom';
-import './assets';
+import '@Assets/bootstrap';
 
 const App: React.FC = () => {
   return (

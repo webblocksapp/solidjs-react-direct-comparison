@@ -1,0 +1,11 @@
+pre .line-of-code {
+  display: inline-block;
+}
+
+pre .line-numbers {
+  pointer-events: none;
+  min-width: 56px;
+  padding-right: 27px;
+  display: inline-block;
+  text-align: right;
+}
