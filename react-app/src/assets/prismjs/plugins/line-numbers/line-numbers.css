@@ -9,3 +9,12 @@ pre .line-numbers {
   display: inline-block;
   text-align: right;
 }
+
+code[class^='language-'] {
+  counter-reset: code-line;
+}
+
+code .line-numbers::after {
+  counter-increment: code-line;
+  content: counter(code-line);
+}

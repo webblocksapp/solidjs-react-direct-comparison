@@ -13,7 +13,7 @@ const addLineNumbers = (html: string) => {
   htmlStrings.forEach((htmlString, i) => {
     tempContainer.innerHTML = '';
     lineOfCodeWrapper.innerHTML = '';
-    lineNumberWrapper.innerHTML = String(i + 1);
+    lineNumberWrapper.innerHTML = '';
     codeWrapper.innerHTML = htmlString;
 
     lineOfCodeWrapper.appendChild(lineNumberWrapper);
