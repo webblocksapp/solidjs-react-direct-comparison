@@ -9,6 +9,7 @@ const menu: Menu[] = [
       { path: '/', label: 'Components' },
       { path: '/states', label: 'States' },
       { path: '/effects', label: 'Effects' },
+      { path: '/derived-states', label: 'Derived States' },
     ],
   },
   {
