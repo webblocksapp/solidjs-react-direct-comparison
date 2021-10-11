@@ -14,7 +14,7 @@ const menu: Menu[] = [
   },
   {
     sectionName: '2. Control Flow',
-    routes: [],
+    routes: [{ path: '/conditional-render', label: 'Conditional render' }],
   },
 ];
 
