@@ -5,6 +5,7 @@ import StatesExample from '@Examples/1-introduction/b-states/StatesExample';
 import EffectsExample from '@Examples/1-introduction/c-effects/EffectsExample';
 import DerivedStatesExample from '@Examples/1-introduction/d-derived-states/DerivedStatesExample';
 import ConditionalRenderExample from '@Examples/2-control-flow/a-conditional-render/ConditionalRenderExample';
+import LoopsExample from '@Examples/2-control-flow/b-loops/LoopsExample';
 
 const MainRoutes: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const MainRoutes: React.FC = () => {
         path="/conditional-render"
         component={ConditionalRenderExample}
       />
+      <Route exact path="/loops" component={LoopsExample} />
     </Switch>
   );
 };
